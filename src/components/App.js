@@ -36,7 +36,10 @@ function App() {
         onButton={selectedCategory}
         selectedButton={setSelectedCategory} 
       />
-      <NewTaskForm />
+       <NewTaskForm
+        onTaskFormSubmit={addNewTask}
+        categories={categories}
+      />
       <TaskList deletedItem={deletedItem} tasks={itemDisplayed}/>
     </div>
   );
